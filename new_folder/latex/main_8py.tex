@@ -1,0 +1,79 @@
+\doxysection{main.\+py File Reference}
+\hypertarget{main_8py}{}\label{main_8py}\index{main.py@{main.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacemain}{main}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemain_a840d5dcd8727c58a7fafa0d954c78a57}{main.\+motor}} (shares)
+\item 
+\mbox{\hyperlink{namespacemain_a4acfeb940c6bb2497182b7be059a1073}{main.\+sensor}} (shares)
+\item 
+\mbox{\hyperlink{namespacemain_a0e87499755628904e3332a2c264dcef6}{main.\+user}} (shares)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemain_a20f34167ce94fc3bd45d24f2af4d827a}{main.\+uart}} = pyb.\+UART(3, 115200)
+\begin{DoxyCompactList}\small\item\em For USB Connection nb\+\_\+in = NB\+\_\+\+Input (USB\+\_\+\+VCP (), echo=True) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemain_ab57db237852d9ebf95dbdf93c4f896f6}{main.\+nb\+\_\+in}} = NB\+\_\+\+Input (\mbox{\hyperlink{namespacemain_a20f34167ce94fc3bd45d24f2af4d827a}{uart}}, echo=True)
+\item 
+\mbox{\hyperlink{namespacemain_a53ed0320302e49d0f03d3eafd9f88dd8}{main.\+tim4}} = Timer(4, freq=500)
+\item 
+\mbox{\hyperlink{namespacemain_a2d3dbca9b46c4b2562c2325241c8e9cb}{main.\+Left\+\_\+\+Motor}} = \mbox{\hyperlink{class_driver_1_1driver}{driver}}(Pin.\+cpu.\+B7, Pin.\+cpu.\+H0, Pin.\+cpu.\+H1, \mbox{\hyperlink{namespacemain_a53ed0320302e49d0f03d3eafd9f88dd8}{tim4}}, 2)
+\item 
+\mbox{\hyperlink{namespacemain_a5541784c8557d241c8cfb3fef86226f3}{main.\+Right\+\_\+\+Motor}} = \mbox{\hyperlink{class_driver_1_1driver}{driver}}(Pin.\+cpu.\+B6, Pin.\+cpu.\+B2, Pin.\+cpu.\+A9, \mbox{\hyperlink{namespacemain_a53ed0320302e49d0f03d3eafd9f88dd8}{tim4}}, 1)
+\item 
+\mbox{\hyperlink{namespacemain_a79c798332936bc7ce1335638c84e84a1}{main.\+Left\+\_\+\+Encoder}} = \mbox{\hyperlink{class_encoder_1_1_encoder}{Encoder}}(3, Pin.\+cpu.\+A7, Pin.\+cpu.\+A6)
+\item 
+\mbox{\hyperlink{namespacemain_ae249859222bc019c50b1eec66948c3cf}{main.\+Right\+\_\+\+Encoder}} = \mbox{\hyperlink{class_encoder_1_1_encoder}{Encoder}}(2, Pin.\+cpu.\+A1, Pin.\+cpu.\+A0)
+\item 
+\mbox{\hyperlink{namespacemain_a45c84fd1160824f471eab28acfe635dd}{main.\+line\+\_\+sensor}}
+\item 
+\mbox{\hyperlink{namespacemain_a5495250368b819b0dee8c300692edef9}{main.\+LBump0}} = pyb.\+Pin(Pin.\+cpu.\+B4, pyb.\+Pin.\+IN, pull=pyb.\+Pin.\+PULL\+\_\+\+UP)
+\item 
+\mbox{\hyperlink{namespacemain_a141d9b9c8cc48cae180c22fcfacb763f}{main.\+LBump1}} = pyb.\+Pin(Pin.\+cpu.\+B5, pyb.\+Pin.\+IN, pull=pyb.\+Pin.\+PULL\+\_\+\+UP)
+\item 
+\mbox{\hyperlink{namespacemain_a080e0e289cde172a56eb1985debb2d47}{main.\+LBump2}} = pyb.\+Pin(Pin.\+cpu.\+B3, pyb.\+Pin.\+IN, pull=pyb.\+Pin.\+PULL\+\_\+\+UP)
+\item 
+\mbox{\hyperlink{namespacemain_acbb801a633dcbb6f861a0e7e75af0c49}{main.\+RBump5}} = pyb.\+Pin(Pin.\+cpu.\+C9, pyb.\+Pin.\+IN, pull=pyb.\+Pin.\+PULL\+\_\+\+UP)
+\item 
+\mbox{\hyperlink{namespacemain_ae5f5c1ea61e8cc68917c1c39c5c9978e}{main.\+RBump4}} = pyb.\+Pin(Pin.\+cpu.\+B8, pyb.\+Pin.\+IN, pull=pyb.\+Pin.\+PULL\+\_\+\+UP)
+\item 
+\mbox{\hyperlink{namespacemain_a41f97cd6400b211b93a64ac1dc7961a2}{main.\+RBump3}} = pyb.\+Pin(Pin.\+cpu.\+B9, pyb.\+Pin.\+IN, pull=pyb.\+Pin.\+PULL\+\_\+\+UP)
+\item 
+\mbox{\hyperlink{namespacemain_ac958ab6537ef0af7ed5055cb143348f8}{main.\+Line\+\_\+\+PID}} = \mbox{\hyperlink{class_p_i_d_1_1_p_i_d}{PID}}(0.\+1, 0.\+02, 0.\+1, 0.\+02, 0.\+01, 0.\+008)
+\item 
+\mbox{\hyperlink{namespacemain_ab2bba10cbf0946121616503df3750664}{main.\+i2c}} = I2C(2)
+\item 
+\mbox{\hyperlink{namespacemain_a6ddb416e42da3a97bf4459234aaec719}{main.\+CONTROLLER}}
+\item 
+\mbox{\hyperlink{namespacemain_ac14aac87c9f29dd54a04665a40956cee}{main.\+baudrate}}
+\item 
+\mbox{\hyperlink{namespacemain_ae701983592736ef095bf138d981fc12a}{main.\+imu}} = \mbox{\hyperlink{class_i_m_u_1_1_i_m_u}{IMU}}(\mbox{\hyperlink{namespacemain_ab2bba10cbf0946121616503df3750664}{i2c}})
+\item 
+\mbox{\hyperlink{namespacemain_a0ed872f79b0b13b7ec4f223d22b43456}{main.\+yaw\+\_\+init}} = imu.\+read\+\_\+\+Euler()
+\item 
+\mbox{\hyperlink{namespacemain_a70bfc5770ee55ff6c70ac2ca46cbc92a}{main.\+Lpos}}
+\item 
+\mbox{\hyperlink{namespacemain_a9d18707a173bec64e8ca770ca0277343}{main.\+Rpos}}
+\item 
+\mbox{\hyperlink{namespacemain_a5a7707bf5c11a642d97982b5c434c3ea}{main.\+Ltime}}
+\item 
+\mbox{\hyperlink{namespacemain_ac4ea8861deaa7469ec352c5c27a45bef}{main.\+Rtime}}
+\item 
+\mbox{\hyperlink{namespacemain_af42a7d8d839af6e839b891555dc420a4}{main.\+heading}}
+\item 
+\mbox{\hyperlink{namespacemain_a3eb468f516370cd04d1d5815d4d76014}{main.\+Leffort}}
+\begin{DoxyCompactList}\small\item\em Shared Variables Stores user\+\_\+in motor effort. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemain_a84826c11720da4779d4c612bfcc0f991}{main.\+Reffort}}
+\item 
+\mbox{\hyperlink{namespacemain_af4b8f4290f8d32e70654f6deb864787f}{main.\+task1}}
+\begin{DoxyCompactList}\small\item\em Scheduler tasks. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemain_a99d189b8f9eb3784cf7d4e5c3241b562}{main.\+task2}}
+\item 
+\mbox{\hyperlink{namespacemain_a120516a5d42c212c898d4616d266077a}{main.\+task3}}
+\end{DoxyCompactItemize}
