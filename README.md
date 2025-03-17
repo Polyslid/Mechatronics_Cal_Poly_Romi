@@ -13,7 +13,7 @@ Figure 1: Romi
 </p>
 
 ## Romi Assembly
-The Romi utilizes a line sensor, an array of bump sensors, an IMU, an encoder, and dc motors. To power these components and manipulate them using python, they are connected to an STM32. Figure 2 shows the table used to store the pin locations for the STM and the NUCLEO for each component on the Romi.
+The Romi utilizes a line sensor, an array of bump sensors, an IMU, an encoder, and dc motors. To power these components and manipulate them using python, they are connected to an STM32. Figure 2 shows the table used to store the pin locations for the STM and the NUCLEO for each component on the Romi and Figure 3 shows the wiring diagram for the system.
 
 <p align="center">
 <kbd>
