@@ -13,7 +13,7 @@ Figure 1: Romi
 </p>
 
 ## Romi Assembly
-The Romi utilizes a line sensor, an array of bumb sensors, an IMU, an encoder, and dc motors. To power these sensors and manipulate them uses python they are connected to an STM32. Figure 2 shows the table used to store the pin locations for the STM and the NUCLEO for each component on the Romi.
+The Romi utilizes a line sensor, an array of bump sensors, an IMU, an encoder, and dc motors. To power these components and manipulate them using python, they are connected to an STM32. Figure 2 shows the table used to store the pin locations for the STM and the NUCLEO for each component on the Romi.
 
 <p align="center">
 <kbd>
@@ -31,7 +31,7 @@ Figure 3: Wiring Diagram
 </p>
 
 ## Driver
-The Driver file is used to enable, disable, and set the effort for the motors used in Romi. By using PWM it is able to set the speed at which the wheels turn by using a percentage between -100 and 100. 
+The Driver file is used to enable, disable, and set the effort for the motors used in Romi. By using PWM it is able to set the speed at which the wheels turn by using a percentage between -100 and 100. With negative values rotating backwards with respect to the Romi's front direction.
 
 ## Encoder
 The Encoder file is used to calculate the distance Romi has traveled and the velocity it is moving at. By using a running average of the difference in time that the encoder code is running based upon a tim.counter and a running average of the total time that has passed since initialization, it is possible to calculate the distance traveled by Romi using self.pos = (self.position/1440) * (70/1000) * math.pi and the velocity using self.delta_m/(dts/(7*1000)).
@@ -46,7 +46,7 @@ The PID file includes the PID for both the line sensor and the IMU. By taking in
 Figure 2: Line Sensor PID
 </p>
 
-For the IMU, the desired heading of the IMU and the actual heading is inputted to determine the error and do the same exact PID process as the line sensor. The IMU PID can be seen in the Figure 3 below. 
+For the IMU, the desired heading of the IMU and the actual heading is inputted to determine the error. The PID performs same exact process as the line sensor but with different gain values that have already been collected when the PID class is initialized. The IMU PID can be seen in the Figure 3 below. 
 <p align="center">
 <kbd>
   <img src=https://github.com/user-attachments/assets/83ad1b52-17f7-4bc0-a2f5-d18215bfb797>
@@ -67,7 +67,7 @@ Figure 4: Centroid Calculation
 </p>
 
 ## IMU
-The IMU reads the Romi's relative heading uses it's built-in accelerometer and gyrometer. The IMU is essential to keeping the Romi driving straight when line following is not possible. The Romi's intial heading value is stored as a reference datum to make degree turns respective to the intial hesading. Using the IMU with the PID, the Romi can drive straight in the desired direction.
+The IMU reads the Romi's relative heading using it's built-in accelerometer and gyrometer. The IMU is essential to keeping the Romi driving straight when line following is not possible. The Romi's intial heading value is stored as a reference datum to make degree turns respective to the intial heading. Using the IMU with the it's PID, the Romi can drive straight in any desired direction.
 
 ## Main
 After obtaining each of these files, they are used within the main file which is formatted as a scheduler using the cotask.py and task_share.py files. The resulting task diagarm can be observed in 
