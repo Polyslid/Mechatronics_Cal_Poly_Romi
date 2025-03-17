@@ -16,6 +16,7 @@ The PID file includes the PID for both the line sensor and the IMU. By taking in
 <kbd>
   <img ![image](https://github.com/user-attachments/assets/bdedcb7b-b9c4-4b11-9011-caade55e2f6c)
 </kbd>
+
 <p align="center">
 Figure 1: Line Sensor PID
 </p>
