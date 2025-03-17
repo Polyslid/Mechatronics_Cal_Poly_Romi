@@ -22,6 +22,7 @@ The Line_Sensor file is the primary file for determining the centroid, list of s
 ![image](https://github.com/user-attachments/assets/eecde3d9-1ff8-48dc-941e-841fc3e541c5)
 Figure 3: Centroid Calculation
 
-
+After obtaining each of these files, they are used within the main file which is formatted as a scheduler using the cotask.py and task_share.py files. The resulting task diagarm can be observed in 
+Figure 4. 
 
 
