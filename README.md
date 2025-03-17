@@ -13,7 +13,7 @@ The Encoder file is used to calculate the distance Romi has traveled and the vel
 
 ## PID
 The PID file includes the PID for both the line sensor and the IMU. By taking in the desired centroid of 0 and the actual centroid location detected on the line sensor, it is possible to calculate the error and use it to determine the propotional, integral, and derivative control. For each of these controls there is also a set gain that is obtained from the main file. The PID for the line sensor can be seen in the Figure 1 below. 
-
+<p align="center">
 <kbd>
   <img src=https://github.com/user-attachments/assets/42d00e26-bd62-4501-b9a1-6b2f0b76550c>
 </kbd>
@@ -22,7 +22,7 @@ Figure 1: Line Sensor PID
 </p>
 
 For the IMU, the desired heading of the IMU and the actual heading is inputted to determine the error and do the same exact PID process as the line sensor. The IMU PID can be seen in the Figure 2 below. 
-
+<p align="center">
 <kbd>
   <img src=https://github.com/user-attachments/assets/83ad1b52-17f7-4bc0-a2f5-d18215bfb797>
 </kbd>
