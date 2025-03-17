@@ -74,7 +74,7 @@ After obtaining each of these files, they are used within the main file which is
 Figure 5. 
 <p align="center">
 <kbd>
-  <img src="https://github.com/user-attachments/assets/e8ca44e2-458e-4169-98ad-a037038e2b35" width="450">
+  <img src="https://github.com/user-attachments/assets/e8ca44e2-458e-4169-98ad-a037038e2b35" width="550">
 </kbd>
 </p>
 <p align="center">
