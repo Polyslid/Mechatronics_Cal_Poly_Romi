@@ -111,7 +111,7 @@ Here is a demonstration video of the Romi Robot in action:
 https://github.com/user-attachments/assets/16161666-6769-4098-9238-770e0adbcabe
 
 <p align="center">
-Figure 8: Demo Video
+Figure 10: Demo Video
 </p>
 
 
