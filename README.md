@@ -17,13 +17,17 @@ The PID file includes the PID for both the line sensor and the IMU. By taking in
   <img src=https://github.com/user-attachments/assets/bdedcb7b-b9c4-4b11-9011-caade55e2f6c>
 </kbd>
 
+
 <p align="center">
 Figure 1: Line Sensor PID
 </p>
 
 For the IMU, the desired heading of the IMU and the actual heading is inputted to determine the error and do the same exact PID process as the line sensor. The IMU PID can be seen in the Figure 2 below. 
 
-![Blank diagram (17)](https://github.com/user-attachments/assets/a015c602-f380-4213-91cc-fef94f264e4b)
+<kbd>
+  <img src=https://github.com/user-attachments/assets/a015c602-f380-4213-91cc-fef94f264e4b>
+</kbd>
+  
 <p align="center">
 Figure 2: IMU PID
 </p>
