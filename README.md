@@ -47,6 +47,14 @@ The IMU reads the Romi's relative heading uses it's built-in accelerometer and g
 ## Main
 After obtaining each of these files, they are used within the main file which is formatted as a scheduler using the cotask.py and task_share.py files. The resulting task diagarm can be observed in 
 Figure 4. 
+<p align="center">
+<kbd>
+  <img src=https://github.com/user-attachments/assets/e8ca44e2-458e-4169-98ad-a037038e2b35>
+</kbd>
+</p>
+<p align="center">
+Figure 4: Scheduler Task Diagram
+</p>
 
 ## Demo
 Here is a demonstration video of the Romi Robot in action:
