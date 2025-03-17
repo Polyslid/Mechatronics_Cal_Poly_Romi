@@ -4,8 +4,13 @@ checkpoint via a line sensor, however between each checkpoint there is an obstac
 other means of navigation are required, such as an IMU that determiens the robots orientation.
 
 There are various files that are combined into this project to make sure that Romi works properly and is able to follow the track. There is the Driver, Encoder, PID, IMU, and Line_Sensor files.
-
-Romi Pic
+<p align="center">
+<kbd>
+  [ Romi Pic ]
+</kbd>
+<p align="center">
+Figure 1: Line Sensor PID
+</p>
 
 ## Driver
 The Driver file is used to enable, disable, and set the effort for the motors used in Romi. By using PWM it is able to set the speed at which the wheels turn by using a percentage between -100 and 100. 
