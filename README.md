@@ -6,7 +6,7 @@ other means of navigation are required, such as an IMU that determiens the robot
 There are various files that are combined into this project to make sure that Romi works properly and is able to follow the track. There is the Driver, Encoder, PID, IMU, and Line_Sensor files.
 <p align="center">
 <kbd>
-  <img src=https://github.com/user-attachments/assets/967b4769-db4d-4fd8-982d-29c7daceaba2>
+  <img src="https://github.com/user-attachments/assets/967b4769-db4d-4fd8-982d-29c7daceaba2" width="550">
 
 </kbd>
 <p align="center">
