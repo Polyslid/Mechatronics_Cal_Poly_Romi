@@ -50,7 +50,7 @@ The PID file includes the PID for both the line sensor and the IMU. By taking in
 Figure 4: Line Sensor PID
 </p>
 
-For the IMU, the desired heading of the IMU and the actual heading is inputted to determine the error. The PID performs same exact process as the line sensor but with different gain values that have already been collected when the PID class is initialized. The IMU PID can be seen in the Figure 5 below. 
+For the IMU (seen here [IMU.py](https://github.com/Polyslid/Mechatronics_Cal_Poly_Romi/blob/main/IMU.py)), the desired heading of the IMU and the actual heading is inputted to determine the error. The PID performs same exact process as the line sensor but with different gain values that have already been collected when the PID class is initialized. The IMU PID can be seen in the Figure 5 below. 
 <p align="center">
 <kbd>
   <img src=https://github.com/user-attachments/assets/83ad1b52-17f7-4bc0-a2f5-d18215bfb797>
