@@ -9,7 +9,21 @@ There are various files that are combined into this project to make sure that Ro
   [ Romi Pic ]
 </kbd>
 <p align="center">
-Figure 1: Line Sensor PID
+Figure 1: Romi
+</p>
+
+## Romi Assembly
+The Romi utilizes a line sensor, an array of bumb sensors, an IMU, an encoder, and . To power these sensors and manipulate them uses python they are connected to an STM32. Figure 2 shows the 
+
+<p align="center">
+<kbd>
+  <img src=https://github.com/user-attachments/assets/36602828-658d-4343-9903-017cd2d0b346)> <img src=https://github.com/user-attachments/assets/f32ddeb4-cbfd-441c-a72a-a78b14b9aff7>
+</kbd>
+Figure 2: 
+<kbd>
+  [ Wiring Diagram (Aiden) ]
+</kbd>
+Figure 3: Wiring Diagram
 </p>
 
 ## Driver
