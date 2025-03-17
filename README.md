@@ -32,10 +32,11 @@ Figure 2: IMU PID
 
 ## Line Sensor
 The Line_Sensor file is the primary file for determining the centroid, list of sensor percentages, and max percentage for the line sensor. By using the ADC input of each GPIO pin used, it is possible to obtain a value for each sensor that can be compared to set calibrated values obtained via the calibration def in the same line_sensor file. By comparing the calibration values and the actual current values, a percentage is obtained for each sensor and the centroid is calculated using a for loop seen in the figure below.
-
+<p align="center">
 <kbd>
   <img src=https://github.com/user-attachments/assets/eecde3d9-1ff8-48dc-941e-841fc3e541c5>
 </kbd>
+</p>
 <p align="center">
 Figure 3: Centroid Calculation
 </p>
@@ -46,6 +47,9 @@ The IMU reads the Romi's relative heading uses it's built-in accelerometer and g
 ## Main
 After obtaining each of these files, they are used within the main file which is formatted as a scheduler using the cotask.py and task_share.py files. The resulting task diagarm can be observed in 
 Figure 4. 
+
+## Demo
+Here is a demonstration video of the Romi Robot in action:
 
 https://github.com/user-attachments/assets/16161666-6769-4098-9238-770e0adbcabe
 
