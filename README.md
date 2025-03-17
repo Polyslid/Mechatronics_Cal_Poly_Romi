@@ -4,6 +4,7 @@ checkpoint via a line sensor, however between each checkpoint there is an obstac
 other means of navigation are required, such as an IMU that determiens the robots orientation.
 
 There are various files that are combined into this project to make sure that Romi works properly and is able to follow the track. There is the Driver, Encoder, PID, IMU, and Line_Sensor files.
+
 ## Driver
 The Driver file is used to enable, disable, and set the effort for the motors used in Romi. By using PWM it is able to set the speed at which the wheels turn by using a percentage between -100 and 100. 
 
@@ -16,8 +17,6 @@ The PID file includes the PID for both the line sensor and the IMU. By taking in
 <kbd>
   <img src=https://github.com/user-attachments/assets/bdedcb7b-b9c4-4b11-9011-caade55e2f6c>
 </kbd>
-
-
 <p align="center">
 Figure 1: Line Sensor PID
 </p>
@@ -27,26 +26,26 @@ For the IMU, the desired heading of the IMU and the actual heading is inputted t
 <kbd>
   <img src=https://github.com/user-attachments/assets/a015c602-f380-4213-91cc-fef94f264e4b>
 </kbd>
-  
 <p align="center">
 Figure 2: IMU PID
 </p>
 
-#Line Sensor
+## Line Sensor
 The Line_Sensor file is the primary file for determining the centroid, list of sensor percentages, and max percentage for the line sensor. By using the ADC input of each GPIO pin used, it is possible to obtain a value for each sensor that can be compared to set calibrated values obtained via the calibration def in the same line_sensor file. By comparing the calibration values and the actual current values, a percentage is obtained for each sensor and the centroid is calculated using a for loop seen in the figure below.
 
-![image](https://github.com/user-attachments/assets/eecde3d9-1ff8-48dc-941e-841fc3e541c5)
+<kbd>
+  <img src=https://github.com/user-attachments/assets/eecde3d9-1ff8-48dc-941e-841fc3e541c5>
+</kbd>
 <p align="center">
 Figure 3: Centroid Calculation
 </p>
 
-#Main
+## IMU
+The IMU reads the Romi's relative heading uses it's built-in accelerometer and gyrometer. The IMU is essential to keeping the Romi driving straight when line following is not possible. The Romi's intial heading value is stored as a reference datum to make degree turns respective to the intial hesading. Using the IMU with the PID, the Romi can drive straight in the desired direction.
+
+## Main
 After obtaining each of these files, they are used within the main file which is formatted as a scheduler using the cotask.py and task_share.py files. The resulting task diagarm can be observed in 
 Figure 4. 
-
-
-
-
 
 https://github.com/user-attachments/assets/16161666-6769-4098-9238-770e0adbcabe
 
