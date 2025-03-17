@@ -70,9 +70,8 @@ Figure 6: Centroid Calculation
 The IMU reads the Romi's relative heading using it's built-in accelerometer and gyrometer. The IMU is essential to keeping the Romi driving straight when line following is not possible. The Romi's intial heading value is stored as a reference datum to make degree turns respective to the intial heading. Using the IMU with the it's PID, the Romi can drive straight in any desired direction.
 
 ## Main
-After obtaining each of these files, they are used within the main file which is formatted as a scheduler using the cotask.py and task_share.py files. The resulting task diagarm can be observed in Figure 5. The user interface task was given the highest priority because it only used at the start and then in case of an emergency stop, which should react quickly. The user task uses non-blocking input code to get the effort from the user. The user could also manually stop the Romi at any time by pressing enter. When the user task receives an input from the user, it stores that effort value in the Leffort and Reffort share. Each motor has an individual effort so that the PID can control each motor to make adjustments in the Romi dynamics. After the effort is sent to the motor task, the sensor task takes over and adjust effort values based off the PID. The motor and sensor task have the same priority because they rely on one another and should be performed one after the other. 
+After obtaining each of these files, they are used within the main file which is formatted as a scheduler using the cotask.py and task_share.py files. The resulting task diagarm can be observed in Figure 5. The user interface task was given the highest priority because it is only used at the start and when there is an emergency stop. The user task uses non-blocking input code using nb_input.py to get the effort from the user. The user could also manually stop the Romi at any time by pressing enter. When the user task receives an input from the user, it stores that effort value in the Leffort and Reffort share. Each motor has an individual effort so that the PID can control each motor to make adjustments in the Romi dynamics. After the effort is sent to the motor task, the sensor task takes over and adjusts the effort values based off the PID results that are obtained by comparing the desired results and the actual to get an error. The motor and sensor task have the same priority and run in round-robin style because they rely on one another and should be performed one after the other. 
 
-The sensor task switches between the line sensor and IMU depending on where on the track the Romi is. The Romi uses the encoder to determine where on the track it is, based on the distance from the start. When the Romi needs to go straight, it has a slight pause where it is able to locate the proper heading, adjust, and then drive straight. This was implemented to make the Romi more robust and keep a consistent headind with respect to the initial. This is especially important for the grid portion of the track because it requires the Romi to travel for a longer distance. By finding the heading first, it minimizes drift.
 <p align="center">
 <kbd>
   <img src="https://github.com/user-attachments/assets/e8ca44e2-458e-4169-98ad-a037038e2b35" width="550">
@@ -81,6 +80,29 @@ The sensor task switches between the line sensor and IMU depending on where on t
 <p align="center">
 Figure 7: Scheduler Task Diagram
 </p>
+
+In order to have Romi travel through sections of the track easier, two finite state machines (FSM) were made. One of the FMSs were used to have ROMI make it through the entire track and then enter the second FSM when the wall is detected using the bump sensor. The other FSM is built into the second state of the first FSM and is just for the very end where it must make multiple turns and adjustments to make it back to the start of the track. The first FSM can be seen in Figure 8 and contains only two states.
+<p align="center">
+<kbd>
+  <img src="https://github.com/user-attachments/assets/69f2e127-e385-4843-a04a-2402f4d50f73">
+</kbd>
+</p>
+<p align="center">
+Figure 8: First FSM for Entire Track
+</p>
+
+Within the second state, the second FSM performs multiple adjustments depending on the Romi's heading and travel distance. This FSM can be seen in Figure 9. 
+<p align="center">
+<kbd>
+  <img src="https://github.com/user-attachments/assets/bfd29601-3a0d-4fec-9784-a234242eb586">
+</kbd>
+</p>
+<p align="center">
+Figure 9: Second FSM for Ending of Track
+</p>
+
+Within the FSMs, the sensor task switches between the line sensor and IMU PID's depending on where on the track the Romi is. The Romi uses the encoder to determine where on the track it is based on the distance from the start and changes its speed depending on the distance it is at. After reaching certain distances on the track, a counter is started that  When the Romi needs to go straight, it has a slight pause where it is able to locate the proper heading, adjust, and then drive straight. This was implemented to make the Romi more robust and keep a consistent heading with respect to the initial. This is especially important for the grid portion of the track because it requires the Romi to travel for a longer distance. By finding the heading first, it minimizes drift. 
+
 
 ## Demo
 Here is a demonstration video of the Romi Robot in action:
