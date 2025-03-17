@@ -41,7 +41,7 @@ The Driver file (seen here [Driver.py](https://github.com/Polyslid/Mechatronics_
 The Encoder file (seen here [Encoder.py](https://github.com/Polyslid/Mechatronics_Cal_Poly_Romi/blob/main/Encoder.py)) is used to calculate the distance Romi has traveled and the velocity it is moving at. By using a running average of the difference in time that the encoder code is running based upon a tim.counter and a running average of the total time that has passed since initialization, it is possible to calculate the distance traveled by Romi using self.pos = (self.position/1440) ⋅ (70/1000) ⋅ math.pi and the velocity using self.delta_m/(dts/(7⋅1000)). In the velocity equation self.delta_m is the change in distance calculated from (deltas/(8⋅1440)) ⋅ (70/1000) ⋅ math.pi after the combination of all the deltas (change in time) together. The division by 1440 is the resolution specific to the encoder, while the ratio of 70/1000 is the Romi wheel diamter. Essentially, this equation converts the ticks measured by the encoder into meters. 
 
 ## PID
-The PID file includes the PID for both the line sensor and the IMU. By taking in the desired centroid of 0 and the actual centroid location detected on the line sensor, it is possible to calculate the error and use it to determine the propotional, integral, and derivative control. For each of these controls there is also a set gain that is obtained from the main file. The PID for the line sensor can be seen in the Figure 4 below. 
+The PID file (seen here [PID.py](https://github.com/Polyslid/Mechatronics_Cal_Poly_Romi/blob/main/PID.py)) includes the PID for both the line sensor and the IMU. By taking in the desired centroid of 0 and the actual centroid location detected on the line sensor, it is possible to calculate the error and use it to determine the propotional, integral, and derivative control. For each of these controls there is also a set gain that is obtained from the main file. The PID for the line sensor can be seen in the Figure 4 below. 
 <p align="center">
 <kbd>
   <img src=https://github.com/user-attachments/assets/42d00e26-bd62-4501-b9a1-6b2f0b76550c>
@@ -60,7 +60,7 @@ Figure 5: IMU PID
 </p>
 
 ## Line Sensor
-The Line_Sensor file (seen here [line_sensor.py](https://github.com/Polyslid/Mechatronics_Cal_Poly_Romi/blob/main/Line_Sensor.py)) is the primary file for determining the centroid, list of sensor percentages, and max percentage for the line sensor. By using the ADC input of each GPIO pin used, it is possible to obtain a value for each sensor that can be compared to set calibrated values obtained via the calibration def in the same line_sensor file. By comparing the calibration values and the actual current values, a percentage is obtained for each sensor and the centroid is calculated using a for loop seen in Figure 6 below.
+The Line_Sensor file (seen here [Line_Sensor.py](https://github.com/Polyslid/Mechatronics_Cal_Poly_Romi/blob/main/Line_Sensor.py)) is the primary file for determining the centroid, list of sensor percentages, and max percentage for the line sensor. By using the ADC input of each GPIO pin used, it is possible to obtain a value for each sensor that can be compared to set calibrated values obtained via the calibration def in the same line_sensor file. By comparing the calibration values and the actual current values, a percentage is obtained for each sensor and the centroid is calculated using a for loop seen in Figure 6 below.
 <p align="center">
 <kbd>
   <img src=https://github.com/user-attachments/assets/eecde3d9-1ff8-48dc-941e-841fc3e541c5>
