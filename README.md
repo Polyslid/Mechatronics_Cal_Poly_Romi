@@ -50,7 +50,7 @@ The PID file (seen here [PID.py](https://github.com/Polyslid/Mechatronics_Cal_Po
 Figure 4: Line Sensor PID
 </p>
 
-For the IMU (seen here [IMU.py](https://github.com/Polyslid/Mechatronics_Cal_Poly_Romi/blob/main/IMU.py)), the desired heading of the IMU and the actual heading is inputted to determine the error. The PID performs same exact process as the line sensor but with different gain values that have already been collected when the PID class is initialized. The IMU PID can be seen in the Figure 5 below. 
+For the IMU, the desired heading of the IMU and the actual heading is inputted to determine the error. The PID performs same exact process as the line sensor but with different gain values that have already been collected when the PID class is initialized. The IMU PID can be seen in the Figure 5 below. 
 <p align="center">
 <kbd>
   <img src=https://github.com/user-attachments/assets/83ad1b52-17f7-4bc0-a2f5-d18215bfb797>
@@ -71,7 +71,7 @@ Figure 6: Centroid Calculation
 </p>
 
 ## IMU
-The IMU reads the Romi's relative heading using it's built-in accelerometer and gyrometer. The IMU is essential to keeping the Romi driving straight when line following is not possible. The Romi's intial heading value is stored as a reference datum to make degree turns respective to the intial heading. Using the IMU with the it's PID, the Romi can drive straight in any desired direction.
+The IMU (seen here [IMU.py](https://github.com/Polyslid/Mechatronics_Cal_Poly_Romi/blob/main/IMU.py)) reads the Romi's relative heading using it's built-in accelerometer and gyrometer. The IMU is essential to keeping the Romi driving straight when line following is not possible. The Romi's intial heading value is stored as a reference datum to make degree turns respective to the intial heading. Using the IMU with the it's PID, the Romi can drive straight in any desired direction.
 
 ## Main
 After obtaining each of these files, they are used within the main file which is formatted as a scheduler using the cotask.py and task_share.py files. The resulting task diagram can be observed in Figure 5. The user interface task was given the highest priority because it is used at the beginning of the program and allows the user initiate a non-resetting emergency stop. The user task uses non-blocking input code using nb_input.py to get the effort from the user. The user could also manually stop the Romi at any time by pressing enter. When the user task receives an input from the user, it stores that effort value in the Leffort and Reffort share. Each motor has an individual effort so that the PID can control each motor to make adjustments in the Romi dynamics. After the effort is sent to the motor task, the sensor task takes over and adjusts the effort values based off the PID results that are obtained by comparing the desired results and the actual to get an error. The motor and sensor task have the same priority and run in round-robin style because they rely on one another and should be performed one after the other. As the sensors update, the signals are sent to the controllers. The controllers send effort to the motors for effort adjustments, and the cycle continues. 
