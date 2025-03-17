@@ -15,19 +15,23 @@ The PID file includes the PID for both the line sensor and the IMU. By taking in
 
 ![image](https://github.com/user-attachments/assets/bdedcb7b-b9c4-4b11-9011-caade55e2f6c)
 <p align="center">
-// Figure 1: Line Sensor PID
+Figure 1: Line Sensor PID
 </p>
 
 For the IMU, the desired heading of the IMU and the actual heading is inputted to determine the error and do the same exact PID process as the line sensor. The IMU PID can be seen in the Figure 2 below. 
 
 ![Blank diagram (17)](https://github.com/user-attachments/assets/a015c602-f380-4213-91cc-fef94f264e4b)
+<p align="center">
 Figure 2: IMU PID
+</p>
 
 #Line Sensor
 The Line_Sensor file is the primary file for determining the centroid, list of sensor percentages, and max percentage for the line sensor. By using the ADC input of each GPIO pin used, it is possible to obtain a value for each sensor that can be compared to set calibrated values obtained via the calibration def in the same line_sensor file. By comparing the calibration values and the actual current values, a percentage is obtained for each sensor and the centroid is calculated using a for loop seen in the figure below.
 
 ![image](https://github.com/user-attachments/assets/eecde3d9-1ff8-48dc-941e-841fc3e541c5)
+<p align="center">
 Figure 3: Centroid Calculation
+</p>
 
 #Main
 After obtaining each of these files, they are used within the main file which is formatted as a scheduler using the cotask.py and task_share.py files. The resulting task diagarm can be observed in 
@@ -39,7 +43,9 @@ Figure 4.
 
 https://github.com/user-attachments/assets/16161666-6769-4098-9238-770e0adbcabe
 
+<p align="center">
 Figure 4: Demo Video
+</p>
 
 
 
