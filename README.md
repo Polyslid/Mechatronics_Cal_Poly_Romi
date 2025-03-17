@@ -6,10 +6,10 @@ There are various files that are combined into this project to make sure that Ro
 #Driver
 The Driver file is used to enable, disable, and set the effort for the motors used in Romi. By using PWM it is able to set the speed at which the wheels turn by using a percentage between -100 and 100. 
 
-#Encoder
+## Encoder
 The Encoder file is used to calculate the distance Romi has traveled and the velocity it is moving at. By using a running average of the difference in time that the encoder code is running based upon a tim.counter and a running average of the total time that has passed since initialization, it is possible to calculate the distance traveled by Romi using self.pos = (self.position/1440) * (70/1000) * math.pi and the velocity using self.delta_m/(dts/(7*1000)).
 
-#PID
+## PID
 The PID file includes the PID for both the line sensor and the IMU. By taking in the desired centroid of 0 and the actual centroid location detected on the line sensor, it is possible to calculate the error and use it to determine the propotional, integral, and derivative control. For each of these controls there is also a set gain that is obtained from the main file. The PID for the line sensor can be seen in the Figure 1 below. 
 
 ![image](https://github.com/user-attachments/assets/bdedcb7b-b9c4-4b11-9011-caade55e2f6c)
