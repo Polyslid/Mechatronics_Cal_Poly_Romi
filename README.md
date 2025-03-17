@@ -35,7 +35,7 @@ Figure 3: Wiring Diagram
 </p>
 
 ## Driver
-The Driver file (seen here Driver.py) is used to enable, disable, and set the effort for the motors used in Romi. By using PWM it is able to set the speed at which the wheels turn by using a percentage between -100 and 100. With negative values rotating backwards with respect to the Romi's front direction.
+The Driver file (seen here [Driver.py](https://github.com/Polyslid/Mechatronics_Cal_Poly_Romi/blob/main/Driver.py)) is used to enable, disable, and set the effort for the motors used in Romi. By using PWM it is able to set the speed at which the wheels turn by using a percentage between -100 and 100. With negative values rotating backwards with respect to the Romi's front direction.
 
 ## Encoder
 The Encoder file is used to calculate the distance Romi has traveled and the velocity it is moving at. By using a running average of the difference in time that the encoder code is running based upon a tim.counter and a running average of the total time that has passed since initialization, it is possible to calculate the distance traveled by Romi using self.pos = (self.position/1440) ⋅ (70/1000) ⋅ math.pi and the velocity using self.delta_m/(dts/(7⋅1000)). In the velocity equation self.delta_m is the change in distance calculated from (deltas/(8⋅1440)) ⋅ (70/1000) ⋅ math.pi after the combination of all the deltas (change in time) together. The division by 1440 is the resolution specific to the encoder, while the ratio of 70/1000 is the Romi wheel diamter. Essentially, this equation converts the ticks measured by the encoder into meters. 
