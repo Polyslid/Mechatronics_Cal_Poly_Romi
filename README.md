@@ -28,10 +28,9 @@ Figure 4.
 
 
 https://github.com/user-attachments/assets/4b925e53-cfa0-49f9-8e76-ca502da6f404
+Figure 4: Demo Video
 
 
 
 
-
-https://github.com/user-attachments/assets/e68594d0-641d-4771-84f9-7e60255a2ea5
 
