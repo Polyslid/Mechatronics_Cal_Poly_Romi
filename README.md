@@ -6,7 +6,8 @@ other means of navigation are required, such as an IMU that determiens the robot
 There are various files that are combined into this project to make sure that Romi works properly and is able to follow the track. There is the Driver, Encoder, PID, IMU, and Line_Sensor files.
 <p align="center">
 <kbd>
-  [ Romi Pic ]
+  <img src=https://github.com/user-attachments/assets/967b4769-db4d-4fd8-982d-29c7daceaba2>
+
 </kbd>
 <p align="center">
 Figure 1: Romi
@@ -17,7 +18,7 @@ The Romi utilizes a line sensor, an array of bump sensors, an IMU, an encoder, a
 
 <p align="center">
 <kbd>
-  <img src="https://github.com/user-attachments/assets/36602828-658d-4343-9903-017cd2d0b346" width="490"> <img src="https://github.com/user-attachments/assets/f32ddeb4-cbfd-441c-a72a-a78b14b9aff7" width="490">
+  <img src="https://github.com/user-attachments/assets/36602828-658d-4343-9903-017cd2d0b346" width="480"> <img src="https://github.com/user-attachments/assets/f32ddeb4-cbfd-441c-a72a-a78b14b9aff7" width="480">
 </kbd>
 <p align="center">
   Figure 2: Wiring Pins Table
