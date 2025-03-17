@@ -17,13 +17,13 @@ The Romi utilizes a line sensor, an array of bumb sensors, an IMU, an encoder, a
 
 <p align="center">
 <kbd>
-  <img src="https://github.com/user-attachments/assets/36602828-658d-4343-9903-017cd2d0b346" width="450"> <img src="https://github.com/user-attachments/assets/f32ddeb4-cbfd-441c-a72a-a78b14b9aff7" width="450">
+  <img src="https://github.com/user-attachments/assets/36602828-658d-4343-9903-017cd2d0b346" width="475"> <img src="https://github.com/user-attachments/assets/f32ddeb4-cbfd-441c-a72a-a78b14b9aff7" width="475">
 </kbd>
 </p>
 <p align="center">
   Figure 2: Wiring Pins Table
 </p>
-
+<p align="center">
 <kbd>
   [ Wiring Diagram (Aiden) ]
 </kbd>
