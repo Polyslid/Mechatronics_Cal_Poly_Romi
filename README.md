@@ -17,7 +17,7 @@ The Romi utilizes a line sensor, an array of bumb sensors, an IMU, an encoder, a
 
 <p align="center">
 <kbd>
-  <img src=https://github.com/user-attachments/assets/36602828-658d-4343-9903-017cd2d0b346)> <img src=https://github.com/user-attachments/assets/f32ddeb4-cbfd-441c-a72a-a78b14b9aff7>
+  <img src="https://github.com/user-attachments/assets/36602828-658d-4343-9903-017cd2d0b346" alt="Title" width="400"> <img src="https://github.com/user-attachments/assets/f32ddeb4-cbfd-441c-a72a-a78b14b9aff7" alt="T2" width="400">
 </kbd>
 Figure 2: 
 <kbd>
