@@ -5,6 +5,8 @@ other means of navigation are required, such as an IMU that determiens the robot
 
 There are various files that are combined into this project to make sure that Romi works properly and is able to follow the track. There is the Driver, Encoder, PID, IMU, and Line_Sensor files.
 
+Romi Pic
+
 ## Driver
 The Driver file is used to enable, disable, and set the effort for the motors used in Romi. By using PWM it is able to set the speed at which the wheels turn by using a percentage between -100 and 100. 
 
