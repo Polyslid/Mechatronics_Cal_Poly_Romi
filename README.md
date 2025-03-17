@@ -60,7 +60,7 @@ Figure 5: IMU PID
 </p>
 
 ## Line Sensor
-The Line_Sensor file (seen here [Line_Sensor.py](https://github.com/Polyslid/Mechatronics_Cal_Poly_Romi/blob/main/Line_Sensor.py)) is the primary file for determining the centroid, list of sensor percentages, and max percentage for the line sensor. By using the ADC input of each GPIO pin used, it is possible to obtain a value for each sensor that can be compared to set calibrated values obtained via the calibration def in the same line_sensor file. By comparing the calibration values and the actual current values, a percentage is obtained for each sensor and the centroid is calculated using a for loop seen in Figure 6 below.
+The Line_Sensor file (seen here [Line_Sensor.py](https://github.com/Polyslid/Mechatronics_Cal_Poly_Romi/blob/main/Line_Sensor.py)) is the primary file for determining the centroid, list of sensor percentages, and max percentage for the line sensor. By using the ADC input of each GPIO pin used, it is possible to obtain a value for each sensor that can be compared to set calibrated values obtained via the calibration def in the same line_sensor file. By comparing the calibration values and the actual current values, a percentage is obtained for each sensor and the centroid is calculated using a for loop and calculation seen in Figure 6 below.
 <p align="center">
 <kbd>
   <img src=https://github.com/user-attachments/assets/eecde3d9-1ff8-48dc-941e-841fc3e541c5>
