@@ -1,5 +1,5 @@
-#### MECHA-12 Romi Term Project
-### BY: Indigo Garcia, Aiden Peltier, Jason Reyes
+# MECHA-12 Romi Term Project
+## BY: Indigo Garcia, Aiden Peltier, Jason Reyes
 
 ## Overview
 This project consists of a robot named Romi that will travel through a premade track with multiple checkpoints. A black line connects each of these checkpoints to each other that Romi will use to reach each 
