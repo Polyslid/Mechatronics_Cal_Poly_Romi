@@ -64,6 +64,7 @@ The Line_Sensor file (seen here [Line_Sensor.py](https://github.com/Polyslid/Mec
 <p align="center">
 <kbd>
   <img src=https://github.com/user-attachments/assets/eecde3d9-1ff8-48dc-941e-841fc3e541c5>
+  <img src=https://github.com/user-attachments/assets/895adaa3-598c-4f88-a0cd-130e5943cfa6>
 </kbd>
 </p>
 <p align="center">
