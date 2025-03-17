@@ -25,16 +25,16 @@ The PID file includes the PID for both the line sensor and the IMU. By taking in
   <img src=https://github.com/user-attachments/assets/42d00e26-bd62-4501-b9a1-6b2f0b76550c>
 </kbd>
 <p align="center">
-Figure 1: Line Sensor PID
+Figure 2: Line Sensor PID
 </p>
 
-For the IMU, the desired heading of the IMU and the actual heading is inputted to determine the error and do the same exact PID process as the line sensor. The IMU PID can be seen in the Figure 2 below. 
+For the IMU, the desired heading of the IMU and the actual heading is inputted to determine the error and do the same exact PID process as the line sensor. The IMU PID can be seen in the Figure 3 below. 
 <p align="center">
 <kbd>
   <img src=https://github.com/user-attachments/assets/83ad1b52-17f7-4bc0-a2f5-d18215bfb797>
 </kbd>
 <p align="center">
-Figure 2: IMU PID
+Figure 3: IMU PID
 </p>
 
 ## Line Sensor
@@ -45,7 +45,7 @@ The Line_Sensor file is the primary file for determining the centroid, list of s
 </kbd>
 </p>
 <p align="center">
-Figure 3: Centroid Calculation
+Figure 4: Centroid Calculation
 </p>
 
 ## IMU
@@ -53,14 +53,14 @@ The IMU reads the Romi's relative heading uses it's built-in accelerometer and g
 
 ## Main
 After obtaining each of these files, they are used within the main file which is formatted as a scheduler using the cotask.py and task_share.py files. The resulting task diagarm can be observed in 
-Figure 4. 
+Figure 5. 
 <p align="center">
 <kbd>
   <img src=https://github.com/user-attachments/assets/e8ca44e2-458e-4169-98ad-a037038e2b35>
 </kbd>
 </p>
 <p align="center">
-Figure 4: Scheduler Task Diagram
+Figure 5: Scheduler Task Diagram
 </p>
 
 ## Demo
@@ -69,7 +69,7 @@ Here is a demonstration video of the Romi Robot in action:
 https://github.com/user-attachments/assets/16161666-6769-4098-9238-770e0adbcabe
 
 <p align="center">
-Figure 4: Demo Video
+Figure 6: Demo Video
 </p>
 
 
